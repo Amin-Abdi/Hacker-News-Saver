@@ -16,7 +16,12 @@ const Search = () => {
     <section className="search">
       <form className="searchForm" onSubmit={handSubmit}>
         <div className="formInput">
-          <input type="text" id="name" ref={searchInput} />
+          <input
+            type="text"
+            id="name"
+            ref={searchInput}
+            placeholder="e.g.Python"
+          />
         </div>
       </form>
     </section>
