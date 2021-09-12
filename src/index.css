@@ -136,3 +136,12 @@ h2 {
 }
 
 /*List*/
+
+.no-list {
+  display: grid;
+  place-items: center;
+}
+
+.no-list h2 {
+  margin-top: 5rem;
+}
