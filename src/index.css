@@ -11,10 +11,15 @@
 
 body {
   font-family: "Helvetica Neue", sans-serif;
+  background-color: #f5eeee;
 }
 
 h2 {
   text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navbar {
@@ -144,4 +149,37 @@ h2 {
 
 .no-list h2 {
   margin-top: 5rem;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* place-items: center; */
+  gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Single Post component */
+.single-post {
+  text-align: left;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.info {
+  margin-top: 0.3rem;
+}
+
+.info a {
+  margin-right: 3rem;
+}
+
+.btn-save {
+  float: right;
 }

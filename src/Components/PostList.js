@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import SinglePost from "./SinglePost";
 import Loading from "./Loading";
 import { useGlobalContext } from "../Context";
 
 const PostList = () => {
-  const { posts, loading, searchTerm, setSearchTerm } = useGlobalContext();
+  const { posts, loading } = useGlobalContext();
 
   console.log("PostList:", posts);
 
@@ -21,8 +21,10 @@ const PostList = () => {
   }
 
   return (
-    <div className="post-list">
-      <h1>This is a list</h1>
+    <div className="list-container">
+      {posts.map((single) => {
+        return <SinglePost key={single.objectID} {...single} />;
+      })}
     </div>
   );
 };
