@@ -201,4 +201,25 @@ a {
   display: grid;
   place-items: center;
   margin-left: 15rem;
+  padding-top: 6rem;
+}
+
+.saved-title {
+  display: grid;
+  place-items: center;
+  margin-left: 18rem;
+  padding-top: 4rem;
+}
+
+.saved-title h2 {
+  font-size: 1.8rem;
+}
+
+.underline {
+  width: 11rem;
+  height: 0.25rem;
+  background: #ff4500;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
 }

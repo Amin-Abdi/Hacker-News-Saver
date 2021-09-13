@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://hn.algolia.com/api/v1/search?query=java";
+const API_URL = "http://localhost:8080/api/posts";
 
 class PostService {
   getPosts() {
