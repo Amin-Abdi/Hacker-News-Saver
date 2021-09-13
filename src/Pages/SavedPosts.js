@@ -10,9 +10,9 @@ const SavedPosts = () => {
 
   const fetchSaved = () => {
     PostService.getPosts().then((res) => {
-      //console.log(res.data);
       setSaved(res.data);
       // console.log(saved);
+      console.log("Rendered");
       setLoad(false);
     });
   };
@@ -23,8 +23,12 @@ const SavedPosts = () => {
 
   const deletePost = (id) => {
     //console.log("The id of the post is " + id);
-    const newPosts = saved.filter((single) => single.id !== id);
-    setSaved(newPosts);
+    // const newPosts = saved.filter((single) => single.id !== id);
+    // setSaved(newPosts);
+    PostService.deletePost(id).then((res) => {
+      const newPosts = saved.filter((single) => single.id !== id);
+      setSaved(newPosts);
+    });
   };
 
   if (load) {

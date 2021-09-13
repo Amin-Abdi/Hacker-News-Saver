@@ -22,7 +22,7 @@ const SavedSingle = ({
           read more
         </a>
         <button className="btn-save" onClick={() => deletePost(id)}>
-          Remove
+          Delete
         </button>
       </div>
     </article>
