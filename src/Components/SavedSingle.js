@@ -1,6 +1,6 @@
 import React from "react";
 
-//This the component rendered for the saved posts page
+//This the single post component rendered for the saved posts page
 const SavedSingle = ({ author, id, points, title, url, deletePost }) => {
   return (
     <article className="single-post">

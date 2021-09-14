@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import HSaver.HackerNewsBackend.exception.ResourceNotFoundException;
 import HSaver.HackerNewsBackend.model.Post;
 import HSaver.HackerNewsBackend.repository.PostRepo;
 

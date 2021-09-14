@@ -6,6 +6,7 @@ const URL = "https://hn.algolia.com/api/v1/search?";
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
+  //This is for the default search value when then app is opened
   const [searchTerm, setSearchTerm] = useState("python");
 
   useEffect(() => {
@@ -40,7 +41,14 @@ const AppProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <AppContext.Provider value={{ loading, posts, searchTerm, setSearchTerm }}>
+    <AppContext.Provider
+      value={{
+        loading,
+        posts,
+        searchTerm,
+        setSearchTerm,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

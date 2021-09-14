@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Loading from "../Components/Loading";
 import PostService from "../Services/PostService";
-//import SavedSingle from ".."
 import SavedSingle from "../Components/SavedSingle";
 
+//This is  the saved Posts page
 const SavedPosts = () => {
   const [load, setLoad] = useState(true);
   const [saved, setSaved] = useState([]);
 
   const fetchSaved = () => {
     PostService.getPosts().then((res) => {
-      //console.log(res.data);
       setSaved(res.data);
       setLoad(false);
     });
@@ -30,6 +29,7 @@ const SavedPosts = () => {
     });
   };
 
+  //Displaying the loading animation if the posts havent loaded yet
   if (load) {
     return (
       <div className="saved-container">
@@ -38,6 +38,7 @@ const SavedPosts = () => {
     );
   }
 
+  //When there is no more posts left to show
   if (saved.length < 1) {
     return (
       <div className="saved-container">

@@ -4,10 +4,13 @@ import Loading from "./Loading";
 import { useGlobalContext } from "../Context";
 import PostService from "../Services/PostService";
 
-const PostList = () => {
-  const { posts, loading } = useGlobalContext();
-  //console.log("PostList:", posts);
+import { useAlert } from "react-alert";
 
+const PostList = () => {
+  const { posts, loading, setSaveMessage } = useGlobalContext();
+  const alert = useAlert();
+
+  //Sending the post to the backend API using axios
   const savePost = async (id) => {
     console.log("Post saved:", id);
     try {
@@ -15,8 +18,13 @@ const PostList = () => {
       const fetchedPost = await response.json();
       console.log(fetchedPost);
       PostService.createPost(fetchedPost).then((res) => {
-        console.log(res, "saved");
+        console.log(res.data, "saved");
+        alert.show("Post saved", {
+          timeout: 2000,
+          type: "success",
+        });
       });
+      setSaveMessage(true);
     } catch (error) {
       console.log(error);
     }

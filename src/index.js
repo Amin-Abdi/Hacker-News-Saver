@@ -4,10 +4,16 @@ import "./index.css";
 import App from "./App";
 import { AppProvider } from "./Context";
 
+//This is for the notification message
+import { Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <AlertProvider template={AlertTemplate}>
+        <App />
+      </AlertProvider>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
