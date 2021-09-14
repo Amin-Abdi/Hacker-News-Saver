@@ -10,9 +10,9 @@ const SavedPosts = () => {
 
   const fetchSaved = () => {
     PostService.getPosts().then((res) => {
+      //console.log(res.data);
       setSaved(res.data);
       // console.log(saved);
-      console.log("Rendered");
       setLoad(false);
     });
   };
