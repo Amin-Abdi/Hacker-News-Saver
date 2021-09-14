@@ -3,10 +3,14 @@ import Loading from "../Components/Loading";
 import PostService from "../Services/PostService";
 import SavedSingle from "../Components/SavedSingle";
 
+import { useAlert } from "react-alert";
+
 //This is  the saved Posts page
 const SavedPosts = () => {
   const [load, setLoad] = useState(true);
   const [saved, setSaved] = useState([]);
+
+  const alert = useAlert();
 
   const fetchSaved = () => {
     PostService.getPosts().then((res) => {
@@ -26,6 +30,10 @@ const SavedPosts = () => {
     PostService.deletePost(id).then((res) => {
       const newPosts = saved.filter((single) => single.id !== id);
       setSaved(newPosts);
+    });
+    alert.show("Post Deleted", {
+      timeout: 1000,
+      type: "error",
     });
   };
 
