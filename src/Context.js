@@ -6,7 +6,7 @@ const URL = "https://hn.algolia.com/api/v1/search?";
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("java");
+  const [searchTerm, setSearchTerm] = useState("python");
 
   useEffect(() => {
     const fetchPosts = async () => {

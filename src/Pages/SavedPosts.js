@@ -12,7 +12,6 @@ const SavedPosts = () => {
     PostService.getPosts().then((res) => {
       //console.log(res.data);
       setSaved(res.data);
-      // console.log(saved);
       setLoad(false);
     });
   };

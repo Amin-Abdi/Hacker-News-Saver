@@ -2,17 +2,6 @@ import React from "react";
 
 //This the component rendered for the saved posts page
 const SavedSingle = ({ author, id, points, title, url, deletePost }) => {
-  // const randPost = {
-  //   author,
-  //   numOfComments,
-  //   id,
-  //   points,
-  //   title,
-  //   url,
-  // };
-
-  // console.log(randPost);
-
   return (
     <article className="single-post">
       <h4>{title}</h4>
