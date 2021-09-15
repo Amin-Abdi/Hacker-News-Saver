@@ -20,7 +20,6 @@ const SinglePost = ({
           read more
         </a>
         <button className="btn-save" onClick={() => savePost(objectID)}>
-          {/* {saveMessage ? `Saved` : "Save"} */}
           Save
         </button>
       </div>

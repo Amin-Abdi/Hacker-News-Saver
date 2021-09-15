@@ -20,6 +20,7 @@ const PostList = () => {
       PostService.createPost(fetchedPost).then((res) => {
         console.log(res.data, "saved");
       });
+      //This is then message that is shown upon post save
       alert.show("Post saved", {
         timeout: 2000,
         type: "success",

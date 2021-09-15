@@ -42,6 +42,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
+      //Values to be shared
       value={{
         loading,
         posts,

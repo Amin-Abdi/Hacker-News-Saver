@@ -24,9 +24,6 @@ const SavedPosts = () => {
   }, []);
 
   const deletePost = (id) => {
-    //console.log("The id of the post is " + id);
-    // const newPosts = saved.filter((single) => single.id !== id);
-    // setSaved(newPosts);
     PostService.deletePost(id).then((res) => {
       const newPosts = saved.filter((single) => single.id !== id);
       setSaved(newPosts);
