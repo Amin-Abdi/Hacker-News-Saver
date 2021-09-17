@@ -8,4 +8,5 @@ import HSaver.HackerNewsBackend.model.Post;
 @Repository
 public interface PostRepo extends JpaRepository<Post, Long>{
 
+	public Post findByAuthor(String name);
 }
