@@ -10,7 +10,7 @@ Run npm install to install the dependencies and then npm start to start the serv
 
 The web page uses the [algolia hacker news API](https://hn.algolia.com/api) to filter out posts based on the user's search. The default search term is python
 
-I used [React Alert](https://www.npmjs.com/package/react-alert) to render the alert notifications.
+I used [React Alert](https://www.npmjs.com/package/react-alert) to render the alert notifications for saving and deleting posts.
 
 ![alt text](./Images/Overview.png "Overview Image")
 
